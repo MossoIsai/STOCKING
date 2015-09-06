@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>2e17a4a6-be7b-48a2-8989-dfc1c1444994</OriginalElement>
+  <nodes>
+    <node x="622.6923076923077" y="302.2611806797852">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.MARCA</node>
+    <node x="623.7030411449015" y="381.0447227191412">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.MODELO</node>
+    <node x="155.17173524150252" y="819.6064400715562">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.TIPOEVENTO</node>
+    <node x="151.00178890876563" y="559.1878354203934">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.MATRIZ</node>
+    <node x="586.4704830053669" y="465.5545617173523">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.SUSTITUCION</node>
+    <node x="676.4007155635063" y="627.4669051878352">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.ESPECIFICACIONES</node>
+    <node x="-144.36135957066188" y="611.304114490161">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.USUARIO</node>
+    <node x="140.84436493738795" y="912.4007155635063">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.GRAVEDAD</node>
+    <node x="865.9320214669052" y="581.1037567084078">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.COMPONENTE</node>
+    <node x="-168.0715563506262" y="327.30411449016106">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.EMPRESA</node>
+    <node x="219.24150268336314" y="0.0">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.FACTURA</node>
+    <node x="794.8228980322006" y="264.2772808586762">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.OBJETO</node>
+    <node x="158.10375670840776" y="422.6296958855098">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.FUNCION</node>
+    <node x="624.1753130590342" y="223.47763864042923">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.ELEMENTO</node>
+    <node x="-154.94096601073352" y="800.3846153846154">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.EVENTO</node>
+    <node x="151.7012522361359" y="683.9284436493738">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.FOTOGRAFIA</node>
+    <node x="-168.0715563506261" y="3.9391771019678004">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.CONTRATO</node>
+    <node x="790.567084078712" y="13.483005366726275">2e17a4a6-be7b-48a2-8989-dfc1c1444994.table:STOCK.TICKET</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="0.7615803814713895" x="450.6171735241503" y="501.2468694096602" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+

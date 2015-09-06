@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - STOCK@localhost" uuid="2e17a4a6-be7b-48a2-8989-dfc1c1444994">
+    <database-info product="MySQL" version="5.5.43-0ubuntu0.12.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="STOCK"/>
+    <table name="COMPONENTE" schema="" catalog="STOCK" type="TABLE">
+      <column name="comId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="comNombre" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="comDescripcionBreve" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="comLigaDescriptiva" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="comId"/>
+    </table>
+    <table name="CONTRATO" schema="" catalog="STOCK" type="TABLE">
+      <column name="conId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="conFechaAlta" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="conFechaBaja" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="empId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="conFolio" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="conVigente" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="conLicenciasWeb" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="conLicenciasMovil" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="conLicenciasAdministrador" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="conNombreContacto" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="conCorreo" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="conCelular" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="conTelefono" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="conId"/>
+    </table>
+    <table name="ELEMENTO" schema="" catalog="STOCK" type="TABLE">
+      <column name="eleId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="eleNombre" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="eleJeraquia" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="eleId"/>
+    </table>
+    <table name="EMPRESA" schema="" catalog="STOCK" type="TABLE">
+      <column name="empId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="empNombre" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="empLogoIzquierda" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="empLogoDerecha" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="empTelefono" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="empCelular" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="empFechaAlta" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="empCorreo" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="empContacto" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="empDescripcion" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="empId"/>
+    </table>
+    <table name="ESPECIFICACIONES" schema="" catalog="STOCK" type="TABLE">
+      <column name="espId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="eleId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="comId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="espId"/>
+    </table>
+    <table name="EVENTO" schema="" catalog="STOCK" type="TABLE">
+      <column name="eveId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tipeId" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="eveFechaAlta" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="usuId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="eveDescripcion" sqlType="VARCHAR" precision="60000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="comId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="eveNumeroSiniestro" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="eveId"/>
+    </table>
+    <table name="FACTURA" schema="" catalog="STOCK" type="TABLE">
+      <column name="facId" sqlType="MEDIUMINT" precision="7" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="facFecha" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="facNombre" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="facDireccion" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12"/>
+      <column name="facRFC" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="facCostoLicenciaWeb" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="facCostoLicenciaMovil" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="facCostoLicenciaAdministrador" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="facCancelada" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="conId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="facId"/>
+    </table>
+    <table name="FOTOGRAFIA" schema="" catalog="STOCK" type="TABLE">
+      <column name="fotId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="fotDescripcion" sqlType="VARCHAR" precision="2000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="fotFechaCaptura" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="usuId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="fotId"/>
+    </table>
+    <table name="FUNCION" schema="" catalog="STOCK" type="TABLE">
+      <column name="funId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="funDescripcion" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="funFechaActualizacion" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="funNombre" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="funId"/>
+    </table>
+    <table name="GRAVEDAD" schema="" catalog="STOCK" type="TABLE">
+      <column name="graId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="graNombre" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="graDescripcion" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="graId"/>
+    </table>
+    <table name="MARCA" schema="" catalog="STOCK" type="TABLE">
+      <column name="marId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="marNombre" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="marId"/>
+    </table>
+    <table name="MATRIZ" schema="" catalog="STOCK" type="TABLE">
+      <column name="matId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="usuId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="matPermiso" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="funId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="matId"/>
+    </table>
+    <table name="MODELO" schema="" catalog="STOCK" type="TABLE">
+      <column name="modId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="modNombre" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="modId"/>
+    </table>
+    <table name="OBJETO" schema="" catalog="STOCK" type="TABLE">
+      <column name="objId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="marId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="modId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="padId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="objSerie" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12" def="J1MvTic="/>
+      <column name="eleId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="objFechaModificacion" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="objBaja" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="objFactura" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="objId"/>
+    </table>
+    <table name="SUSTITUCION" schema="" catalog="STOCK" type="TABLE">
+      <column name="susId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="objId_sustituido" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="objId_nuevo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="susFecha" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="susDescripcion" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12" def="J1NpbiBEZXNjcmlwY2nDs24n"/>
+      <primary-key name="PRIMARY" columns="susId"/>
+    </table>
+    <table name="TICKET" schema="" catalog="STOCK" type="TABLE">
+      <column name="ticId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="ticFechaApertura" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="ticFechaCierre" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="objId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="graId" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ticDescripcion" sqlType="VARCHAR" precision="3000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="usuIdApertura" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="usuIdCierre" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="eleId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="ticId"/>
+    </table>
+    <table name="TIPOEVENTO" schema="" catalog="STOCK" type="TABLE">
+      <column name="tipeId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tipeNombre" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="tipeId"/>
+    </table>
+    <table name="USUARIO" schema="" catalog="STOCK" type="TABLE">
+      <column name="usuId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="usuCorreo" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="usuPws" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="perId" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="conId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="usuBaja" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="usuId"/>
+    </table>
+    <procedure name="sp_addContrato" schema="" catalog="STOCK" type="1">
+      <prototype>
+        <parameter name="fecha_a" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91" type="1" index="1"/>
+        <parameter name="fecha_b" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91" type="1" index="2"/>
+        <parameter name="empresa" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="3"/>
+        <parameter name="l_web" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="4"/>
+        <parameter name="l_mov" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="5"/>
+        <parameter name="ladmin" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="6"/>
+        <parameter name="name_con" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" type="1" index="7"/>
+        <parameter name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" type="1" index="8"/>
+        <parameter name="cel" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" type="1" index="9"/>
+        <parameter name="tel" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" type="1" index="10"/>
+      </prototype>
+    </procedure>
+    <procedure name="sp_addEmpresa" schema="" catalog="STOCK" type="1">
+      <prototype>
+        <parameter name="empresa" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="log_izq" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="log_der" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" type="1" index="3"/>
+        <parameter name="tel_emp" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" type="1" index="4"/>
+        <parameter name="cel_emp" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" type="1" index="5"/>
+        <parameter name="fech_reg" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91" type="1" index="6"/>
+        <parameter name="email_emp" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" type="1" index="7"/>
+        <parameter name="contac_emp" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" type="1" index="8"/>
+        <parameter name="descrip_emp" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" type="1" index="9"/>
+      </prototype>
+    </procedure>
+    <procedure name="sp_conHobjeto" schema="" catalog="STOCK" type="1">
+      <prototype>
+        <parameter name="idPadre" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="1"/>
+      </prototype>
+    </procedure>
+    <procedure name="sp_conPobjeto" schema="" catalog="STOCK" type="1"/>
+    <procedure name="sp_elementos" schema="" catalog="STOCK" type="1"/>
+    <procedure name="sp_empresas" schema="" catalog="STOCK" type="1"/>
+    <procedure name="sp_list_contrato" schema="" catalog="STOCK" type="1"/>
+    <procedure name="sp_list_empresa" schema="" catalog="STOCK" type="1"/>
+    <procedure name="sp_marcas" schema="" catalog="STOCK" type="1"/>
+    <procedure name="sp_modelos" schema="" catalog="STOCK" type="1"/>
+  </data-source>
+</component>
