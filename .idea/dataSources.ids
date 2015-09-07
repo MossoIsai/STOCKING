@@ -175,6 +175,16 @@
         <parameter name="tel" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" type="1" index="10"/>
       </prototype>
     </procedure>
+    <procedure name="sp_addDispositivo" schema="" catalog="STOCK" type="1">
+      <prototype>
+        <parameter name="marca" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="1"/>
+        <parameter name="modelo" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="2"/>
+        <parameter name="serie" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12" type="1" index="3"/>
+        <parameter name="dispositivo" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="4"/>
+        <parameter name="fechamod" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91" type="1" index="5"/>
+        <parameter name="factura" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" type="1" index="6"/>
+      </prototype>
+    </procedure>
     <procedure name="sp_addEmpresa" schema="" catalog="STOCK" type="1">
       <prototype>
         <parameter name="empresa" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
@@ -197,6 +207,7 @@
     <procedure name="sp_elementos" schema="" catalog="STOCK" type="1"/>
     <procedure name="sp_empresas" schema="" catalog="STOCK" type="1"/>
     <procedure name="sp_list_contrato" schema="" catalog="STOCK" type="1"/>
+    <procedure name="sp_list_elemento" schema="" catalog="STOCK" type="1"/>
     <procedure name="sp_list_empresa" schema="" catalog="STOCK" type="1"/>
     <procedure name="sp_marcas" schema="" catalog="STOCK" type="1"/>
     <procedure name="sp_modelos" schema="" catalog="STOCK" type="1"/>

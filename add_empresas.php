@@ -103,9 +103,10 @@
         var descricion_emp = $('#descripcion').val();
 
 
-        var datos = "emp="+nom_emp+"&log1="+logoizq_emp+"&log2"+logoder_emp+
+        var datos = "emp="+nom_emp+"&log1="+logoizq_emp+"&log2="+logoder_emp+
             "&tel="+tel_emp+"&cel="+cel_emp+"&f_alta="+fechareg_emp+"&email="+email_emp+
                 "&con="+contacto_emp+"&descripcion="+descricion_emp;
+
 
         $.ajax({
            type : "POST",

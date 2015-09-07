@@ -124,7 +124,6 @@
             viewdata();
         });
     });
-
 </script>
 </body>
 </html> 
